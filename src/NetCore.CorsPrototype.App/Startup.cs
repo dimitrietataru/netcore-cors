@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NetCore.CorsPrototype.App.Extensions;
 
 namespace NetCore.CorsPrototype.App
 {
@@ -19,6 +20,8 @@ namespace NetCore.CorsPrototype.App
         {
             services.AddSingleton(configuration);
 
+            services.AddCorsPolicies();
+
             services.AddControllers();
         }
 
@@ -31,6 +34,7 @@ namespace NetCore.CorsPrototype.App
 
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseCorsPolicies(env);
             app.UseAuthorization();
             app.UseEndpoints(routeBuilder => routeBuilder.MapControllers());
         }
