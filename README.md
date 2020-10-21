@@ -1,6 +1,6 @@
 # .NET Core - Cross-Origin Resource Sharing (CORS)
 
-### Configure
+## Configure
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
 {
@@ -29,7 +29,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-### Usage
+## Usage
 > Different policies can be applied to controllers, page models, or action methods with the *[EnableCors]* attribute.  
 When the *[EnableCors]* attribute is applied to a controller, page model, or action method, and CORS is enabled in middleware, both policies are applied.  
 **We recommend against combining policies**. Use the *[EnableCors]* attribute or middleware, not both in the same app.  
