@@ -1,4 +1,4 @@
-# .NET Core - Cross-Origin Resource Sharing (CORS)
+# .NET - Cross-Origin Resource Sharing (CORS)
 
 ## Configure
 ``` csharp
